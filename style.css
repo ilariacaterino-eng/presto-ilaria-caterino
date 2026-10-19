@@ -45,3 +45,24 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4{
     transition: 0.5s;
 }
 
+/* header */
+.header{
+    background-image: linear-gradient(rgba(0,0,0), transparent, rgba(0,0,0)), url('./media/hyperspace.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.btn-custom{
+    color: var(--yellow);
+    background-color: var(--black);
+    border: 2px solid var(--yellow);
+    margin: 0px 15px;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+.btn-custom:hover{
+    color: var(--black);
+    background-color: var(--yellow);
+    /* border: 2px solid var(--black); */
+    transform: scale(1.1);
+}
