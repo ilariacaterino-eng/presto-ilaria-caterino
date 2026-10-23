@@ -41,11 +41,35 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4{
     width: 50px;
 }
 .navbar{
-    height: 70px;
+    min-height: 70px;
     transition: 0.5s;
 }
-
+.navbar-toggler .navbar-toggler-icon{
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffe81f' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    
+}
+.navbar-toggler {
+  padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
+  font-size: var(--bs-navbar-toggler-font-size);
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid var(--yellow, #ffe81f);
+  border-radius: var(--bs-navbar-toggler-border-radius);
+  transition: var(--bs-navbar-toggler-transition);
+}
+.navbar-toggler-scrolled {
+  border-color: var(--black, #171717);
+}
+.navbar-toggler-scrolled .navbar-toggler-icon {
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23171717' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
 /* header */
+ h1{
+        font-size: 70px;
+    }
+.custom-vh{
+    height: 100vh;
+}
 .header{
     background-image: linear-gradient(rgba(0,0,0), transparent, rgba(0,0,0)), url('./media/hyperspace.jpg');
     background-repeat: no-repeat;
@@ -65,4 +89,55 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4{
     background-color: var(--yellow);
     /* border: 2px solid var(--black); */
     transform: scale(1.1);
+}
+
+/* positioned */
+.positioned{
+    position: relative;
+    top: -90px;
+}
+.col-custom{
+    padding: 10px;
+    /* border: 2px solid var(--black); */
+    margin: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.col-custom:hover{
+    transform: scale(1.1);
+}
+
+
+/* numeri */
+.number{
+    font-size: 50px;
+    font-weight: 900;
+}
+.yoda-custom{
+    width: 500px;
+    border-radius: 10px;
+}
+.display{
+    
+}
+@media (max-width: 576px){
+    .logo{
+        width: 65px;
+    }
+    h1{
+        font-size: 60px;
+    }
+    .custom-vh{
+        height: 75vh;
+    }
+    .navbar{
+        min-height: 70px;
+    }
+    .display{
+        display: none;
+    }
+}
+/* swiper */
+.swiper{
+    height: 600px;
 }
