@@ -117,9 +117,7 @@ h1{
     width: 500px;
     border-radius: 10px;
 }
-.display{
-    
-}
+
 /* swiper */
 .swiper{
     height: 400px;
@@ -147,6 +145,31 @@ h1{
     --swiper-navigation-top-offset: 50%;
     --swiper-navigation-sides-offset: 10px;
     --swiper-navigation-color: var(--yellow);
+}
+/* accordion */
+.accordion-item, .accordion-button{
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+.accordion-button:not(.collapsed){
+    background-color: var(--black);
+    color: var(--yellow);
+    box-shadow: none;
+}
+.accordion-button:focus{
+    box-shadow: none;
+}
+.card-custom{
+    height: 200px;
+    width: 300px;
+    border: 2px solid var(--yellow);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    margin: 10px; 
 }
 
 
