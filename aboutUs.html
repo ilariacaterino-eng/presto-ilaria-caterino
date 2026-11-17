@@ -7,18 +7,18 @@
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
-    <!-- bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- custom css -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- navbar -->
-    <nav id="navbar" class="navbar navbar-expand-lg bg-black"> 
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="./media/iconyellow.svg" alt="Logo del sito" class="logo">
+                <!-- logo -->
+                <i class="fa-solid fa-paw fa-3x logo"></i>
             </a>
             <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -40,14 +40,18 @@
         </div>
     </nav>
     <!-- navbar end -->
-
-    <h1 class="text-center fs-1 mt-3">Chi siamo</h1>
+    
+    <div class="text-center mt-100px">
+        <h1 class="fontS-6 fw-bold">Chi siamo</h1>
+        <p class="text-muted">Clicca sulla x per conoscere il nostro team felino</p>
+    </div>
+    
     <section class="container-fluid">
-        <div class="row vh-75">
-            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+        <div class="row vh-50">
+            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center mt-5">
                 <div class="circle">
-                    <div class="opener d-flex align-items-center justify-content-center">
-                        <i class="fa-solid fa-plus fa-3x text-black logo"></i>
+                    <div class="opener">
+                        <i class="fa-solid fa-plus fa-3x text-black"></i>
                     </div>
                     <!-- <div class="moved"></div>
                     <div class="moved"></div>
@@ -55,42 +59,79 @@
                     <div class="moved"></div> -->
                 </div>
             </div>
-            <div class="col-9 col-md-6 d-flex align-items-center">
-                <div class="flip-card d-none">
+            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+                <div class="flipCard d-none">
                     <div class="inner">
                         <div class="fronte"></div>
                         <div class="retro">
-                            <p class="h4"></p>
-                            <p class="lead"></p>
+                            <p class="h1">Matteo</p>
+                            <p class="font-retro-custom">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
     </section>
     
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <!-- font awesome -->
-        <script src="https://kit.fontawesome.com/c763ff2d7a.js" crossorigin="anonymous"></script>
-        <!-- bootstrap js -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- custom js -->
-        <script src="./aboutUs.js"></script>
-    </body>
-    </html>
+    
+    
+    
+    
+    
+    
+    
+    <!-- footer -->
+    <footer class="text-light pt-5 pb-3 footer-custom mt-70px">
+        <div class="container">
+            <div class="row">
+                
+                <!-- Colonna 1: Info divertenti -->
+                <div class="col-12 col-md-4">
+                    <h3 class="text-pink h4 mb-3">Repubblica Felina</h3>
+                    <p>Dedicato a tutti gli umani che servono fedelmente i propri padroni pelosi.</p>
+                    <p class="fst-italic small text-secondary">"Fatto con amore e peli di gatto su ogni tastiera."</p>
+                </div>
+                
+                <!-- Colonna 2: Link utili (a modo loro) -->
+                <div class="col-6 col-md-4">
+                    <h4 class="text-pink h5 mb-3">Esplora le Fusa</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none footer-link">Miao Policy (Home)</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none footer-link">Scatole Preferite</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none footer-link">Lotta ai Puntatori Laser</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none footer-link">Dormire 18 Ore al Giorno</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Colonna 3: Legale e Contatti -->
+                <div class="col-6 col-md-4">
+                    <h4 class="text-pink h5 mb-3">Ufficio Reclami</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none footer-link">Politica sui Croccantini (Cookie)</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none footer-link">Privacy dei Peluche</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none footer-link">Miagola con noi (Contatti)</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+            <!-- Copyright -->
+            <div class="row mt-4 pt-3 border-top border-secondary text-center">
+                <div class="col-12">
+                    <p class=" small mb-0 text-secondary">&copy; 2026 Miciopoli. Tutti i diritti riservati... ma gestiti interamente dai gatti.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+    
+    
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/c763ff2d7a.js" crossorigin="anonymous"></script>
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- custom js -->
+    <script src="./aboutUs.js"></script>
+</body>
+</html>

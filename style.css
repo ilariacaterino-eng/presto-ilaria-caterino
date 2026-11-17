@@ -1,17 +1,32 @@
+
 *{
     font-family: "Lato", sans-serif;
 }
 h1, h2, h3, h4, .h1, .h2, .h3, .h4{
-    font-family: "Orbitron", sans-serif;
+    font-family: "Cabin Sketch", sans-serif;
+    /* font-weight: 400; */
+    /* font-style: normal; */
 }
 body{
     background-color: var(--white);
 }
+.vh-75{
+    min-height: 75vh;
+}
+.vh-50{
+    min-height: 50vh;
+}
+.fontS-6{
+    font-size: 70px;
+}
+#cardWrapper {
+    min-height: 60vh; /* Garantisce che l'area delle card occupi almeno metà dello schermo, anche se vuota */
+}
 :root{
-    --purple: rgb(220, 56, 238);
-    --black: rgb(24, 22, 24);
-    --pink: #ba0a48;
-    --white: rgb(200, 162, 200);
+    --purple: rgb(236, 113, 113);
+    --black: rgb(32, 14, 5);
+    --pink: #ecaf52;
+    --white: rgb(247, 222, 211);
 }
 .bg-purple{
     background-color: var(--purple);
@@ -35,7 +50,7 @@ body{
     color: var(--pink);
 }
 /* navbar */
- .navbar{
+.navbar{
     min-height: 70px;
     background-color: var(--black);
     transition: 0.5s;
@@ -76,7 +91,7 @@ body{
     transition: 0.3s;
 }
 .navbar-toggler .navbar-toggler-icon{
-    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23dc38ee' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(184%2C 105%2C 74)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 .navbar.scrolled .navbar-toggler{
     border-color: var(--black);
@@ -86,13 +101,13 @@ body{
 }
 /* header */
 h1{
-    font-size: 70px;
+    font-size: 110px;
 }
 .custom-vh{
     height: 100vh;
 }
 .header{
-    background-image: linear-gradient(rgba(0,0,0), transparent, rgba(0,0,0)), url('./media/hyperspace.jpg');
+    background-image: linear-gradient(rgba(0,0,0), transparent, rgba(0,0,0)), url('./media/header.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -138,7 +153,15 @@ h1{
     width: 500px;
     border-radius: 10px;
 }
-
+.h3-custom{
+    font-size: 70px;
+}
+#firstNumber, #secondNumber, #thirdNumber, #filtra-per{
+    font-family: "Cabin Sketch", sans-serif;
+}
+.number-image{
+    border: 4px solid var(--purple);
+}
 /* swiper */
 .swiper{
     height: 400px;
@@ -146,9 +169,10 @@ h1{
 .card-review{
     min-height: 250px;
     width: 500px;
-    border: 2px solid var(--purple);
+    /* border: 2px solid var(--purple); */
     border-radius: 10px;
     padding: 10px;
+    background-color: var(--purple);
 }
 .swiper-slide{
     display: flex;
@@ -182,6 +206,7 @@ h1{
     box-shadow: none;
 }
 .card-custom{
+    background-color: var(--purple);
     height: 200px;
     width: 300px;
     border: 2px solid var(--purple);
@@ -191,91 +216,150 @@ h1{
     justify-content: center;
     align-items: center;  
     margin: 10px; 
+    box-shadow: 0 4px 20px rgba(32,14,5, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card-custom:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(32,14,5, 0.06);
+}
+.card-custom h3{
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--black);
+    margin: 0;
+}
+.card-custom p {
+    font-size: 0.95rem;
+    color: #494747;
+    margin: 0;
+}
+.mt-70px{
+    margin-top: 70px;
+}
+.accordion {
+    background-color: transparent;
+    border: none;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(32, 14, 5, 0.06); 
+}
+#accordionFlushExample{
+    position: sticky;
+    top: 25vh;
+}
+.filter-container{
+    position: sticky;
+    top: 25vh;
+    align-self: flex-start;
+}
+.filter-container h3 {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--black);
+    letter-spacing: -0.5px;
 }
 
+
+
 /* chi siamo */
+.mt-100px{
+    margin-top: 100px;
+}
+.vh-75 {
+    min-height: 75vh; 
+}
 .circle{
-    height: 300px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
     border-radius: 50%;
-    border: 3px solid var(--purple);   
+    border: 4px solid var(--purple);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    
 }
 .opener{
     height: 75px;
     width: 75px;
     border-radius: 50%;
-    border: 3px solid var(--black);
+    background-color: var(--purple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
     position: absolute;
     z-index: 3;
-    cursor: pointer;
-    transition: 0.5s;
-    background-color: var(--purple);
-}
-.vh-75{
-    height: 75vh;
+    
 }
 .moved{
-    height: 75px;
-    width: 75px;
+    height: 80px;
+    width: 80px;
     border-radius: 50%;
-    border: 2px solid var(--purple);
+    /* background-color: var(--purple); */
     position: absolute;
     z-index: 2;
     transition: 0.5s;
-    background-color: var(--purple);
-    background-position: center;
-    background-size: 100%;
+    background-size: cover;
+    cursor: pointer;
+    border: 3px solid var(--purple);
+    
 }
-.flip-card{
-    height: 300px;
-    width: 300px;
-    /* border: 2px solid var(--yellow);
-    border-radius: 10px;
-    background-image: url(./media/ugo.jpg);
-    background-position: center;
-    background-size: 100%;
-    background-repeat: no-repeat; */
+.flipCard{
+    height: 400px;
+    width: 400px;
+    transition: 0.5s;
+    border-radius: 15px;
+    margin-right: 400px;
 }
-.flip-card:hover > .inner{
+.flipCard:hover > .inner{
     transform: rotateY(180deg);
 }
 .inner{
-    border: 2px solid var(--purple);
-    border-radius: 10px;
-    height: 300px;
-    width: 300px;
+    height: 100%;
+    width: 100%;
+    border: 4px solid var(--purple);
+    border-radius: 15px;
     position: relative;
     transition: 0.5s;
     transform-style: preserve-3d;
 }
 .fronte{
-    height: 300px;
-    width: 300px;
-    /* background-image: url(./media/ugo.jpg); */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url(./media/ugo.jpg);
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
-    border-radius: 10px;
-    position: absolute;
     backface-visibility: hidden;
-    
+    border-radius: 10px;
 }
 .retro{
-    height: 300px;
-    width: 300px;
-    position: absolute; 
+    height: 100%;
+    width: 100%;
+    position: absolute;
     backface-visibility: hidden;
     transform: rotateY(180deg);
     text-align: center;
-    padding: 15px;
-    color: var(--black);
+    background-color: var(--purple);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    padding: 15px;
+}
+.font-retro-custom{
+    font-size: 20px;
+    color: #302e2e;
+}
+
+
+/* footer */
+.footer-custom{
+    background-color: var(--black);
+    border-top: 5px solid var(--purple);
+    width: 100%;
 }
 
 
@@ -301,5 +385,29 @@ h1{
     .swiper-button-prev{
         display: none;
     }
-    
+    .filter-container {
+        position: static;
+        top: 20vh;
+        align-self: flex-start;
+    }
+    .moved{
+        height: 60px;
+        width: 60px;
+    }
+    .flipCard{
+        height: 250px;
+        width: 250px;
+        margin-top: 50px;
+        margin-right: 0px;
+    }
+    .fontS-6{
+        font-size: 50px;
+    }
 }
+/* @media (min-width: 768px){
+.circle{
+width: 300px;
+height: 300px;
+}
+
+} */

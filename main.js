@@ -1,10 +1,10 @@
 let navbar = document.querySelector('#navbar');
 let links = document.querySelectorAll('.nav-link');
 let navbarToggler = document.querySelector('.navbar-toggler');
+let logo = document.querySelector('.logo');
 let firstNumber = document.querySelector('#firstNumber');
 let secondNumber = document.querySelector('#secondNumber');
 let thirdNumber = document.querySelector('#thirdNumber');
-let logo = document.querySelector('.logo');
 
 console.log(navbarToggler);
 
